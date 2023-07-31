@@ -1,0 +1,16 @@
+version: "3"
+services:
+  components:
+    image: "my-components"
+    build:
+      context: ./packages/components
+  utils:
+    image: "my-utils"
+    build:
+      context: ./packages/utils
+  pokedex:
+    image: "my-pokedex"
+    build:
+      context: ./packages/pokedex
+    ports:
+      - 3000:3000
